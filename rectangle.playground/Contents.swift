@@ -6,6 +6,12 @@ struct Rectangle {
     var rightBottomX:Float
     var rightBottomY:Float
     
+    init () {
+        leftTopX = 4.5
+        leftTopY = 10.5
+        rightBottomX = 15
+        rightBottomY = 3.5
+    }
     func printReact() {
         let leftTop = (self.leftTopX, self.leftTopY)
         let leftBottom = (self.leftTopX, self.rightBottomY)
@@ -31,7 +37,7 @@ struct Rectangle {
 }
 
 //var rect = Rectangle(leftTopX: 5, leftTopY: 11, rightBottomX: 15, rightBottomY: 4)
-var rect = Rectangle(leftTopX: 4.5, leftTopY: 10.5, rightBottomX: 15, rightBottomY: 3.5)
-print(rect.printReact())
-print(rect.printArea())
-print(rect.printCenter())
+var rect = Rectangle()
+rect.printReact()
+rect.printArea()
+rect.printCenter()
