@@ -7,15 +7,26 @@
 
 import Foundation
 
-func CentoMeter(number:Float) -> Float {
-    return number / 100
+func meterToCen(origin:String) -> String {
+    let tmp = origin.components(separatedBy: "M").joined()
+    let result = String(Float(tmp)! * 100) + "CM"
+    return result
 }
 
-print("\(CentoMeter(number: 120))M")
-
-func MetertoCen(number:Float) {
-    print("\(Int(number * 100))cm")
+func cenToMeter(origin:String) -> String {
+    let tmp = origin.components(separatedBy: "CM").joined()
+    let result = String(Float(tmp)! / 100) + "M"
+    return result
 }
 
-MetertoCen(number: 1.86)
+func unitConverter(origin:String) -> String {
+    if origin.contains("CM") {
+        return cenToMeter(origin: origin)
+    } else {
+        return meterToCen(origin: origin)
+    }
+}
+
+print(unitConverter(origin: "180CM"))
+print(unitConverter(origin: "1.8M"))
 
