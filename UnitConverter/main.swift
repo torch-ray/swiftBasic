@@ -69,7 +69,9 @@ func unitConverter(origin:String, standard:String?) {
 
 
 if let inputValue = readLine()?.split(separator: " ") {
-    if inputValue.count > 1 {
+    if !inputValue[0].contains("cm") && !inputValue[0].contains("m") && !inputValue[0].contains("inch") {
+        print("지원하지 않는 단위입니다.")
+    } else if inputValue.count > 1 {
         unitConverter(origin: String(inputValue[0]), standard: String(inputValue[1]))
     } else {
         unitConverter(origin: String(inputValue[0]), standard: nil)
