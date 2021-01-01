@@ -27,6 +27,7 @@ func unitConverter(origin:String) -> String {
     }
 }
 
-print(unitConverter(origin: "180CM"))
-print(unitConverter(origin: "1.8M"))
+if let inputValue = readLine() {
+    print(unitConverter(origin: inputValue))
+}
 
