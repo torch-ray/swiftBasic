@@ -5,8 +5,8 @@ struct MyPoint {
     var myY:Float
     
     init() {
-        myX = 2.5
-        myY = 15.8
+        myX = 15
+        myY = 12.2
     }
     
     func printPoint() {
@@ -23,11 +23,11 @@ struct MyPoint {
         return y
     }
     
-//    func getDistanceTo(toPoint:MyPoint) -> Float {
-//        let distance:Float = abs(self.myX - self.myY)
-//        print(distance)
-//        return distance
-//    }
+    func getDistanceTo(toPoint:MyPoint) -> Float {
+        let distance:Float = abs(self.myX - self.myY)
+        print(distance)
+        return distance
+    }
 }
 
 var pointA = MyPoint()
@@ -36,7 +36,6 @@ var x = pointA.setX(x: 15.2)
 var y = pointA.setY(y: 7.4)
 print("pointA=(\(x), \(y))")
 
-//var pointB = MyPoint()
-//pointB.getDistanceTo(toPoint: MyPoint(15, 12.2))
-
+var pointB = MyPoint()
+pointB.getDistanceTo(toPoint: MyPoint.init())
 
